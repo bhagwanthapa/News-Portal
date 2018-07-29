@@ -1,0 +1,242 @@
+
+/* -------------------------------------------------------------- 
+  
+   reset.css
+   * Resets default browser CSS.
+   
+-------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  // font-size: 100%;
+  // font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+table,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+
+/* Remove annoying border on linked images. */
+a img {
+  border: none;
+}
+
+$textBlack: #333;
+$textFaded: #90949c;
+$fadedGray: #777;
+$white: #fff;
+$borderGray: #ccc;
+$bodyBg: #f1f1f1;
+// $red:#f00;
+
+body {
+  background: $fadedGray;
+  margin: 0 auto;
+  padding: 0;
+}
+
+div,
+section {
+  background: $white;
+}
+a {
+  color: $textBlack;
+}
+
+nav {
+  a {
+    text-transform: capitalize;
+  }
+}
+
+.news-left-col {
+  .news-site-heading {
+    padding: 10px 0;
+
+    a {
+      color: $textBlack;
+    }
+
+    img {
+      height: 45px;
+    }
+  }
+}
+
+.white-card {
+  background: $white;
+  // margin-bottom:25px;
+  // padding:15px;
+}
+
+.news-box {
+  ul {
+    margin: 0;
+    padding: 0 12px;
+  }
+
+  li {
+    list-style: none;
+    padding: 8px 0;
+    border-bottom: 1px dotted $borderGray;
+  }
+
+  li:last-child {
+    border: none;
+
+    color: $fadedGray;
+  }
+
+  li:last-child a {
+    border: none;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+    color: $fadedGray;
+  }
+
+  a {
+    color: $textBlack;
+    font-weight: 500;
+    font-size: 15px;
+
+    :hover {
+      text-decoration-style: none;
+    }
+  }
+
+  .news-date {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: $textFaded !important;
+  }
+
+  .news-date::before {
+    font-family: FontAwesome;
+    content: "\f017";
+    margin-right: 5px;
+    opacity: 0.7;
+  }
+
+  .trending::before {
+    font-family: FontAwesome;
+    content: " ";
+    margin-right: 0;
+  }
+}
+
+/***Middle-news-column-----***/
+
+.news-site-title {
+  // color:#f00;
+  padding: 0;
+  //  font-size:85px;
+  font-weight: 600;
+}
+
+.test {
+  color: #0f0;
+}
+// body{background:red;}
+
+.filter-box .form-control {
+  border: none;
+  padding: 0.4rem 2.2rem;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.4rem 4rem 0.4rem 3.8rem;
+}
+.active {
+  border-radius: 0;
+}
+
+p {
+  line-height: 22px;
+}
+.fixed-sidebar {
+  display: block;
+  height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  // background:red;
+}
