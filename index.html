@@ -8,7 +8,7 @@
   <meta name="author" content="">
   <link rel="icon" href="favicon.ico">
 
-  <title>Blog Template for Bootstrap</title>
+  <title>Trending News</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -25,195 +25,72 @@
 <body>
 
 
+  <div id="app">
 
-  <section id="app">
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow p-2">
+      <a class="navbar-brand col-md-2 mr-0" href="#">Trending News</a>
 
+      <!-- <input class="form-control " type="text" placeholder="Search News" aria-label="Search"> -->
+      <input class="form-control form-control-dark w-50" id="searchQuery" v-model="searchQuery" placeholder="Search News" aria-label="Search">
 
-    <div class="container-fluid">
-
-
-        <header class="blog-header fixed-top">
-            <div class="row flex-nowrap justify-content-start  bg-light " >
-              <div class="col-2 pt-1">
-                <a class="text-muted" href="#"><a class="blog-header-logo text-dark text-capitalize img-fluid" href="#">
-                    <img src="images/logo.png" alt="">
-                  </a></a>
-              </div>
-              <div class="col-8 text-center">
-                <a class="blog-header-logo text-dark text-capitalize" href="#"> <nav class="navbar0 navbar0-lig0ht">
-                    <form class="form-inline0">
-                      <div class="row mb-4">
-                        <div class="col-md-11">
-                          <input class="form-control mr-sm-2" id="searchQuery" v-model="searchQuery"  placeholder="Search News" aria-label="Search">
-                        </div>
-                        <div class="col-md-1">
-                          <button class="btn btn-outline-primary  my-2 my-sm-0" type="submit">Search </button>
-                        </div>
-                      </div>
-                    </form>
-                  </nav></a>
-              </div>
-
-              <div class="col-md-2"></div>
-              <!-- <div class="col-4 d-flex justify-content-end align-items-center"> -->
-                <!-- <a class="text-muted" href="#"> -->
-                  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg> -->
-                <!-- </a> -->
-                <!-- <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a> -->
-              <!-- </div> -->
-            </div>
-          </header>
-      
-
-
-
-      <div class="row">
-        <div class="col-md-2">
-          <a class="blog-header-logo text-dark text-capitalize img-fluid" href="#">
-            <img src="images/logo.png" alt="">
-          </a>
-
-        </div>
-        <div class="col-md-8">
-          <nav class="navbar0 navbar0-lig0ht">
-            <form class="form-inline0">
-              <div class="row mb-4">
-                <div class="col-md-10">
-                  <input class="form-control mr-sm-2" id="searchQuery" v-model="searchQuery"  placeholder="Search News" aria-label="Search">
-                </div>
-                <div class="col-md-1">
-                  <button class="btn btn-outline-primary  my-2 my-sm-0" type="submit">Search </button>
-                </div>
-              </div>
-            </form>
-          </nav>
-        </div>
-        <div class="col-md-2">
-          <!-- <p>
-            Time:
-            <span id="hour">...</span> :
-            <span id="minutes">...</span> :
-            <span id="seconds">...</span>
-            </span>
-
-
-          </p>
-
-          <p>
-            <span id="day">...</span> -
-            <span id="month">...</span> -
-            <span id="year">...</span>
-            </span>
-
-          </p> -->
-        </div>
-
-
-      </div>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Refresh</a>
+        </li>
+      </ul>
+    </nav>
 
 
 
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-      <div class="row">
-        <div class="col-md-3 " style="padding: 0;margin: 0;">
-          <form action="">
+    <section>
+      <div class="container-fluid">
 
-            <div class="row fixed-sidebar">
-
-
-              <div class="row mt-5">
-
-                <news-site-list></news-site-list>
-              </div>
-
-
-              <form>
-                <div class="filter-box">
-                  <div class="form-control  ">
-                    <div class="form-group form-check col-md-12">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                    </div>
-                    <div class="form-group form-check col-md-12">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                    </div>
-                    <div class="form-group form-check col-md-12">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                    </div>
-                    <div class="form-group form-check col-md-12">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                    </div>
-                    <div class="form-group form-check col-md-12">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                    </div>
-                    <div class="form-group form-check col-md-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                      </div>
-                      <div class="form-group form-check col-md-12">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                      </div>
-                       <div class="form-group form-check col-md-12">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                    </div>
-                    <div class="form-group form-check col-md-12">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1">Kantipur </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </form>
-        </div>
-
-
-
-        <div class="col-md-9 news-column">
-          <div class="row white-card5 news-list">
-            <div class="col-md-8">
-              <div class="row">
-                <main-news-list v-bind:search-query="searchQuery">
-                </main-news-list>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-md-3 d-none d-sm-block">
+            <news-site-list></news-site-list>
           </div>
+          <div class="col-md-7 news-column">
+            <main-news-list v-bind:search-query="searchQuery">
+            </main-news-list>
+          </div>
+          <div class="col-md-2">Advertisement</div>
         </div>
-        
       </div>
-    </div>
-  </section>
+    </section>
+
+  </div>
 
 
   <script type="text/x-template" id="main-news-list">
     <div>
-    <div v-for="(newsSet,index) in newsSetList">
-        <div class="md-col-12">
-            <h3 class="news-site-title">{{newsSet.site}}</h3>
+    <div v-for="(newsSet,index) in newsSetList" class="mb-4">
+     
+            <h4 class="news-site-title">{{newsSet.site}}</h4>
             <hr>
-        </div>
-        <div v-for="(news,newsIndex) in newsSet.news" v-show="newsIndex < 10 && (news.text.toLocaleLowerCase().indexOf(searchQuery.toLocaleLowerCase()) > -1 || searchQuery === '' || searchQuery === null || searchQuery.length === 0)" class="md-col-12 news-list">
-            <div class="media">
-                <img class="mr-3" src="images/unnamed.jpg" alt="Generic placeholder image" style="width: 80px;"/>
-                <div class="media-body">
+  
+        <div v-for="(news,newsIndex) in newsSet.news" v-show="newsIndex < 10 && (news.text.toLocaleLowerCase().indexOf(searchQuery.toLocaleLowerCase()) > -1 || searchQuery === '' || searchQuery === null || searchQuery.length === 0)" >
+            <div class="media mb-2">
+                <img class="" src="images/unnamed.jpg" alt="Generic placeholder">
+                <div class="media-body pl-2">
                   <a :href="newsSet.site+news.link" target="_blank">
-                  <h4 class="mt-0">{{ news.text }}</h4>
-                  </a>
+                  <h5 class="mt-0">{{ news.text }}</h5>
                   <p>
-                    {{news.link}}
-                  </p>
-        
-                    <p><small>5 minutes ago</small></p>
+                      {{news.link}}
+                    </p>
+          
+                     <p> <small class="text-black-50">5 minutes ago</small></p>  
+                  </a>
+                  
               </div>
               
-            </div>
+            </div> 
 
     </div>
   </div>
@@ -221,16 +98,14 @@
   </script>
 
   <script type="text/x-template" id="news-site-list">
-    <div>
       <ul class="list-group">
-        <li class="list-group-item" style="background: #f1f1f1;font-weight:600;">
-          <a href="">All Sites</a>
+        <li class="list-group-item ">
+          <a class="active" href="">All Sites</a>
         </li>
         <li  v-for="(site,index) in newsSiteList" class="list-group-item">
           <a href="">{{ site }}</a>
         </li>
       </ul>
-    </div>
   </script>
 
 

@@ -1,109 +1,21 @@
-
-/* -------------------------------------------------------------- 
-  
-   reset.css
-   * Resets default browser CSS.
-   
--------------------------------------------------------------- */
-
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-code,
-del,
-dfn,
-em,
-img,
-q,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: inherit;
-  font-style: inherit;
-  // font-size: 100%;
-  // font-family: inherit;
-  vertical-align: baseline;
-}
-
-body {
-  line-height: 1.5;
-}
-
-/* Tables still need 'cellspacing="0"' in the markup. */
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-caption,
-th,
-td {
-  text-align: left;
-  font-weight: normal;
-}
-table,
-td,
-th {
-  vertical-align: middle;
-}
-
-/* Remove possible quote marks (") from <q>, <blockquote>. */
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-}
-blockquote,
-q {
-  quotes: "" "";
-}
-
-/* Remove annoying border on linked images. */
-a img {
-  border: none;
-}
-
-$textBlack: #333;
+$textBlack:#000;
+$textDark: #333;
 $textFaded: #90949c;
 $fadedGray: #777;
 $white: #fff;
 $borderGray: #ccc;
 $bodyBg: #f1f1f1;
 // $red:#f00;
+
+a{
+    color: $textDark;
+    
+   img {border: none;}
+   &:hover{text-decoration:none!important;color:$textBlack}
+}
+
+
+h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
 
 body {
   background: $fadedGray;
@@ -115,9 +27,9 @@ div,
 section {
   background: $white;
 }
-a {
-  color: $textBlack;
-}
+
+
+
 
 nav {
   a {
@@ -130,7 +42,7 @@ nav {
     padding: 10px 0;
 
     a {
-      color: $textBlack;
+      color: $textDark;
     }
 
     img {
@@ -138,6 +50,8 @@ nav {
     }
   }
 }
+
+.news-column{overflow:hidden!important;}
 
 .white-card {
   background: $white;
@@ -171,13 +85,14 @@ nav {
     color: $fadedGray;
   }
 
-  a {
-    color: $textBlack;
-    font-weight: 500;
-    font-size: 15px;
+  a{
+    // color: $textBlack;
+    // font-weight: 500;
+    // font-size: 15px;
 
     :hover {
-      text-decoration-style: none;
+      text-decoration: none;
+      // color:red!important;
     }
   }
 
@@ -204,11 +119,15 @@ nav {
 
 /***Middle-news-column-----***/
 
+
+
+
 .news-site-title {
   // color:#f00;
-  padding: 0;
+  // padding:10px;
   //  font-size:85px;
   font-weight: 600;
+  // border-bottom: 1px solid #ccc;
 }
 
 .test {
@@ -218,12 +137,13 @@ nav {
 
 .filter-box .form-control {
   border: none;
-  padding: 0.4rem 2.2rem;
+  // padding: 0.4rem 2.2rem;
 }
 
 .list-group-item {
   border: none;
-  padding: 0.4rem 4rem 0.4rem 3.8rem;
+  overflow: hidden;
+  // padding: 0.4rem 4rem 0.4rem 3.8rem;
 }
 .active {
   border-radius: 0;
@@ -240,3 +160,6 @@ p {
   overflow-x: hidden;
   // background:red;
 }
+
+
+.form-control{border-radius:0;}
