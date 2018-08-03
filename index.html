@@ -13,7 +13,8 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
 
 
   <!-- Custom styles for this template -->
@@ -25,40 +26,53 @@
 <body>
 
 
+
+  <br>
+  <br>
+
   <div id="app">
 
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow p-2">
-      <a class="navbar-brand col-md-2 mr-0" href="#">Trending News</a>
 
-      <!-- <input class="form-control " type="text" placeholder="Search News" aria-label="Search"> -->
-      <input class="form-control form-control-dark w-50" id="searchQuery" v-model="searchQuery" placeholder="Search News" aria-label="Search">
 
-      <ul class="navbar-nav px-3">
+    <nav class="navbar navbar-dark  fixed-top  shadow bg-danger p-2  ">
+
+      <a href="#" class="ml-4 " id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </a>
+      <a class="navbar-brand d-none d-sm-block " href="#">
+        <i class="fas fa-fire"></i> Trending News </a>
+
+      <input class="form-control form-control-dark w-auto  col-md-6" id="searchQuery" v-model="searchQuery" placeholder="Search News"
+        aria-label="Search">
+
+      <ul class="navbar-nav px-4">
         <li class="nav-item text-nowrap">
           <a class="nav-link" href="#">Refresh</a>
         </li>
       </ul>
     </nav>
+    <br>
+    <br>
 
-
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <section>
       <div class="container-fluid">
 
         <div class="row">
           <div class="col-md-3 d-none d-sm-block">
-            <news-site-list></news-site-list>
+
+            <div class="fixed-sidebar">
+              <news-site-list></news-site-list>
+            </div>
+
           </div>
-          <div class="col-md-7 news-column">
-            <main-news-list v-bind:search-query="searchQuery">
-            </main-news-list>
+          <div class="col-md-7 ">
+            <div class="news-column">
+              <main-news-list v-bind:search-query="searchQuery">
+              </main-news-list>
+
+            </div>
+
           </div>
           <div class="col-md-2">Advertisement</div>
         </div>
@@ -99,8 +113,8 @@
 
   <script type="text/x-template" id="news-site-list">
       <ul class="list-group">
-        <li class="list-group-item ">
-          <a class="active" href="">All Sites</a>
+        <li class="list-group-item bg-light ">
+          <a  href="">All Sites</a>
         </li>
         <li  v-for="(site,index) in newsSiteList" class="list-group-item">
           <a href="">{{ site }}</a>
@@ -119,9 +133,9 @@
 <script src="src/js/site.js"></script>
 <script src="src/js/news.js"></script>
 <script src="src/js/app.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/events.js"></script>
 <!-- <script>
     Holder.addTheme('thumb', {
       bg: '#55595c',

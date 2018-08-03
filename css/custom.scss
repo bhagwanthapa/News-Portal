@@ -1,4 +1,4 @@
-$textBlack:#000;
+$textBlack: #000;
 $textDark: #333;
 $textFaded: #90949c;
 $fadedGray: #777;
@@ -7,18 +7,31 @@ $borderGray: #ccc;
 $bodyBg: #f1f1f1;
 // $red:#f00;
 
-a{
-    color: $textDark;
-    
-   img {border: none;}
-   &:hover{text-decoration:none!important;color:$textBlack}
+a {
+  color: $textDark;
+
+  img {
+    border: none;
+  }
+  &:hover {
+    text-decoration: none !important;
+    color: $textBlack;
+  }
 }
 
-
-h1,h2,h3,h4,h5,h6,p{margin: 0;padding: 0;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  background: $fadedGray;
+  background: $white;
   margin: 0 auto;
   padding: 0;
 }
@@ -27,9 +40,6 @@ div,
 section {
   background: $white;
 }
-
-
-
 
 nav {
   a {
@@ -51,7 +61,9 @@ nav {
   }
 }
 
-.news-column{overflow:hidden!important;}
+.news-column {
+  overflow: hidden !important;
+}
 
 .white-card {
   background: $white;
@@ -85,7 +97,7 @@ nav {
     color: $fadedGray;
   }
 
-  a{
+  a {
     // color: $textBlack;
     // font-weight: 500;
     // font-size: 15px;
@@ -119,9 +131,6 @@ nav {
 
 /***Middle-news-column-----***/
 
-
-
-
 .news-site-title {
   // color:#f00;
   // padding:10px;
@@ -134,6 +143,11 @@ nav {
   color: #0f0;
 }
 // body{background:red;}
+
+
+#searchQuery{padding: 6px 11px;border: 1px solid #eee}
+
+// .form-control{}
 
 .filter-box .form-control {
   border: none;
@@ -158,8 +172,16 @@ p {
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
-  // background:red;
+  transition: 0.2s linear all;
+}
+
+.fixed-sidebar-overlap{
+
+  position: absolute;
+}
+
+.form-control {
+  border-radius: 0;
 }
 
 
-.form-control{border-radius:0;}
